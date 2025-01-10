@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მთავარი გვერდი</title>
+    <style>
+        /* საერთო სტილები */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>კეთილი იყოს თქვენი მობრძანება!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">მთავარი</a></li>
+                    <li><a href="contact.html">დაგვიკავშირდით</a></li>
+                    <li><a href="about.html">შესახებ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <!-- Main page content -->
+            <h2>მთავარი გვერდი</h2>
+            <p>ეს არის ჩვენი ვებსაიტის მთავარი გვერდი. აქ შეგიძლიათ მოიძიოთ ინფორმაცია ჩვენს პროდუქტებზე და მომსახურებებზე.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ყველა უფლება დაცულია</p>
+    </footer>
+
+    <!-- JavaScript to switch between pages -->
+    <script>
+        const page = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === page) {
+                link.style.fontWeight = 'bold';
+            }
+        });
+    </script>
+</body>
+</html>

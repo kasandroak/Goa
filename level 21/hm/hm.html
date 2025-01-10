@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაციის ფორმა</title>
+</head>
+<body>
+    <h1>რეგისტრაციის ფორმა</h1>
+    <form action="/submit_form" method="post">
+        <label for="name">სახელი:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="country">ქვეყანა:</label>
+        <select id="country" name="country" required>
+            <option value="georgia">საქართველო</option>
+            <option value="usa">აშშ</option>
+            <option value="uk">ბრიტანეთი</option>
+            <!-- დაამატეთ სხვა ქვეყნები აქ -->
+        </select><br><br>
+
+        <label for="city">ქალაქი:</label>
+        <select id="city" name="city" required>
+            <!-- საქართველოს ქალაქები -->
+            <option value="tbilisi">თბილისი</option>
+            <option value="batumi">ბათუმი</option>
+            <option value="kutaisi">ქუთაისი</option>
+            <!-- დაამატეთ სხვა ქალაქები აქ -->
+        </select><br><br>
+
+        <input type="submit" value="გაგზავნა">
+    </form>
+</body>
+</html>

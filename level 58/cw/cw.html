@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Column Preview Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f0f4f8, #e7e7e7);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #ff6f61;
+        }
+
+        h2 {
+            color: #333;
+            margin: 15px 0 5px;
+            font-size: 1.5em;
+        }
+
+        p {
+            color: #555;
+            padding: 0 15px 15px;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            padding: 15px;
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            border-top: 1px solid #ff4a4a;
+        }
+
+        .card-footer button {
+            background: white;
+            color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .card-footer button:hover {
+            background: #ff4a4a;
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://i.imgur.com/3yDtvCn.png" alt="Snappy Process" class="card-image">
+            <h2>Snappy Process</h2>
+            <p>Our application offers a simple onboarding process and an intuitive user interface.</p>
+            <div class="card-footer">
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/XcIEn3G.png" alt="Affordable Prices" class="card-image">
+            <h2>Affordable Prices</h2>
+            <p>We provide the best services at a price that’s affordable for everyone.</p>
+            <div class="card-footer">
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/cLCTa5U.png" alt="Secure Storage" class="card-image">
+            <h2>Secure Storage</h2>
+            <p>Our top-notch security ensures your data is safe and secure.</p>
+            <div class="card-footer">
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
