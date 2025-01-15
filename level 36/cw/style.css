@@ -1,0 +1,27 @@
+/* ღილაკის სტილი */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url('https://andersonpediatricdentistry.com/blog/176287-the-power-of-a-smile'); /* ფოტოს მისამართი */
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+}
+
+/* დივის სტილი */
+.content {
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background-image: url('https://www.dreamstime.com/illustration/smile.html'); /* ფოტოს მისამართი */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
