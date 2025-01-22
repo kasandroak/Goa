@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Priority Test</title>
+
+  <!-- Internal CSS -->
+  <style>
+    p {
+      color: green; /* ეს სტილი არის internal */
+      font-size: 25px;
+    }
+  </style>
+
+  <!-- External CSS (ამ კოდში ეს ფაილი არ დევს, მაგრამ ვაჩვენებ როგორ უნდა იყოს ამ შემთხვევაში) -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+</head>
+<body>
+  <!-- Inline CSS -->
+  <p style="color: red; font-size: 30px;">This text is red and big, coming from inline CSS.</p>
+
+  <p>This text is green and big, coming from internal CSS.</p>
+
+  <p>This text will be affected by the external CSS (if the "style.css" file exists).</p>
+
+</body>
+</html>

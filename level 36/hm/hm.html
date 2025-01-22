@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემზე</title>
+    <style>
+        /* მთლიანი საიტის ფონი */
+        body {
+            background-color: #f0f8ff; /* სასურველი ფერი */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        /* დივის სტილი */
+        .content {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* ღილაკის სტილი */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* ფონის ვარუნების განმარტებები */
+        /* repeat - ფონი გამოჩნდება რამდენჯერმე ორივე მიმართულებით */
+        /* no-repeat - ფონი გამოჩნდება ერთხელ */
+        /* repeat-x - ფონი გამოჩნდება მხოლოდ ჰორიზონტალურად */
+        /* repeat-y - ფონი გამოჩნდება მხოლოდ ვერტიკალურად */
+    </style>
+</head>
+<body>
+    <h1>ჩემზე</h1>
+    <div class="content">
+        <p>გამარჯობა! მე ვარ სტუდენტი და ვსწავლობ პროგრამირებას.</p>
+        <button onclick="changeBackground()">გაფორმება</button>
+    </div>
+    
+    <script>
+        function changeBackground() {
+            document.querySelector('.content').style.backgroundColor = '#e0f7fa'; // ახალი ფონი
+        }
+    </script>
+</body>
+</html>

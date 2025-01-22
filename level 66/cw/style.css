@@ -1,0 +1,53 @@
+/* :root შიდა სტილი */
+:root {
+    --color: #333;                 /* ტექსტის ფერი */
+    --background-color: #f4f4f4;   /* ფონის ფერი */
+    --font-size: 16px;             /* ტექსტის ზომა */
+    --font-family: 'Arial', sans-serif; /* შრიფტი */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* ჩრდილი */
+    --border: 1px solid #ddd;      /* საზღვარი */
+    --border-radius: 8px;          /* საზღვრის რადიუსი */
+    --margin: 20px;                /* მარგინი */
+    --padding: 15px;               /* Padding */
+    --position: relative;          /* პოზიციონირება */
+}
+
+/* ზოგადი სტილი */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: var(--padding);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    margin: var(--margin);
+    padding: var(--padding);
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+}
+
+footer {
+    text-align: center;
+    padding: var(--padding);
+    background-color: #333;
+    color: white;
+    position: var(--position);
+    bottom: 0;
+    width: 100%;
+}
