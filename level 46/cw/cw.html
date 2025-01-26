@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        /* Common style */
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        /* Task 1: Simple animation using from and to */
+        @keyframes simpleAnimation {
+            from {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+            }
+            to {
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        .animation1 {
+            animation: simpleAnimation 3s forwards;
+        }
+
+        /* Task 2: Complex animation with multiple transformations */
+        @keyframes complexAnimation {
+            0% {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                border-radius: 0%;
+                transform: rotate(0deg);
+            }
+            50% {
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                transform: rotate(45deg);
+            }
+            100% {
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                transform: rotate(90deg);
+            }
+        }
+
+        .animation2 {
+            background-color: red;
+            animation: complexAnimation 2s 3;
+        }
+
+        /* Task 3: Animation with 5 keyframes (states) */
+        @keyframes stateAnimation {
+            0% {
+                background-color: red;
+                transform: scale(1);
+            }
+            25% {
+                background-color: yellow;
+                transform: scale(1.5);
+            }
+            50% {
+                background-color: green;
+                transform: scale(2);
+            }
+            75% {
+                background-color: blue;
+                transform: scale(1.5);
+            }
+            100% {
+                background-color: purple;
+                transform: scale(1);
+            }
+        }
+
+        .animation3 {
+            animation: stateAnimation 4s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Simple animation using from and to -->
+    <div class="box animation1"></div>
+
+    <!-- Task 2: Complex animation with multiple transformations -->
+    <div class="box animation2"></div>
+
+    <!-- Task 3: Animation with 5 keyframes (states) -->
+    <div class="box animation3"></div>
+
+</body>
+</html>
