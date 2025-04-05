@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling და Capturing</title>
+  <style>
+    #parent {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      padding: 20px;
+    }
+    #child {
+      width: 100px;
+      height: 40px;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="parent">
+    Parent Div
+    <button id="child">დაწკაპე მე</button>
+  </div>
+
+  <script>
+    // 1. Bubbling (ბუბლინგი) რეჟიმი: მოვლენა იწყება ყველაზე დაბალ ელემენტზე და ბუბლდება მაღლა.
+    document.getElementById('parent').addEventListener('click', function() {
+      alert('Parent Div-მა მიიღო კლიკი (Bubbling)');
+    });
+
+    document.getElementById('child').addEventListener('click', function(event) {
+      alert('ღილაკი დაჭერილი იყო (Bubbling)');
+      // გავაჩერებთ ბუბლინგის გაგრძელებას
+      event.stopPropagation();
+    });
+
+    // 2. Capturing (კაპჩერინგი) რეჟიმი: მოვლენა იწყება ყველაზე მაღალ ელემენტზე და ჩადის ქვემოთ.
+    document.getElementById('parent').addEventListener('click', function() {
+      alert('Parent Div-მა მიიღო კლიკი (Capturing)');
+    }, true);
+
+    document.getElementById('child').addEventListener('click', function(event) {
+      alert('ღილაკი დაჭერილი იყო (Capturing)');
+    }, true);
+  </script>
+
+</body>
+</html>
