@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* საერთო სტილები */
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      transition: transform 2s ease-in-out, background-color 1s ease;
+    }
+
+    /* 1. ბრუნვადი ბურთი */
+    .spinning-ball {
+      background-color: #e74c3c;
+      animation: spinAndChangeColor 3s infinite;
+    }
+
+    @keyframes spinAndChangeColor {
+      0% {
+        transform: rotate(0deg);
+        background-color: #e74c3c;
+      }
+      50% {
+        transform: rotate(180deg);
+        background-color: #3498db;
+      }
+      100% {
+        transform: rotate(360deg);
+        background-color: #e74c3c;
+      }
+    }
+
+    /* 2. ზიგზაგის მოძრაობა */
+    .zigzag {
+      background-color: #9b59b6;
+      animation: zigzagMovement 2s infinite ease-in-out;
+    }
+
+    @keyframes zigzagMovement {
+      0%, 100% {
+        transform: translateX(0) translateY(0);
+      }
+      50% {
+        transform: translateX(50px) translateY(50px);
+      }
+    }
+
+    /* 3. ზომის ცვლილება */
+    .resize {
+      background-color: #95a5a6;
+      animation: resizeEffect 2s infinite ease-in-out;
+    }
+
+    @keyframes resizeEffect {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="spinning-ball"></div>
+  <div class="zigzag"></div>
+  <div class="resize"></div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* საერთო სტილები */
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      transition: transform 0.3s ease, background-color 1s ease 2s;
+    }
+
+    /* 1. მაუსის მიტანისას გადატრიალება 50px-ით */
+    .move-right:hover {
+      transform: translateX(50px);
+    }
+
+    /* 2. მაუსის მიტანისას ზომის გაზრდა 2-ჯერ */
+    .scale-up:hover {
+      transform: scale(2);
+    }
+
+    /* 3. მაუსის მიტანისას ზომის გაზრდა 1.5-ჯერ, დაჭერისას ცოტა შემცირება */
+    .scale-up-down:hover {
+      transform: scale(1.5);
+    }
+
+    .scale-up-down:active {
+      transform: scale(0.9);
+    }
+
+    /* 4. მაუსის მიტანისას გადატრიალება 180 გრადუსით */
+    .rotate:hover {
+      transform: rotate(180deg);
+    }
+
+    /* 5. მაუსის მიტანისას 2 წამით დატოვებს გაჩერებას, შემდეგ შეცვლის ფერს და გადატრიალდება 180 გრადუსით */
+    .delayed:hover {
+      background-color: #f1c40f;
+      transform: rotate(180deg);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="move-right" style="background-color: #3498db;"></div>
+  <div class="scale-up" style="background-color: #e74c3c;"></div>
+  <div class="scale-up-down" style="background-color: #2ecc71;"></div>
+  <div class="rotate" style="background-color: #f39c12;"></div>
+  <div class="delayed" style="background-color: #8e44ad;"></div>
+
+</body>
+</html>
