@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        /* 2. ფერის ცვლა წითლიდან მწვანემდე 3 წამში */
+        .color-change {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: changeColor 3s infinite;
+        }
+
+        @keyframes changeColor {
+            0% { background-color: red; }
+            100% { background-color: green; }
+        }
+
+        /* 3. ელემენტის გადაადგილება მარჯვნივ 200px-ით 2 წამში */
+        .move-right {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation: moveRight 2s forwards;
+        }
+
+        @keyframes moveRight {
+            0% { left: 0; }
+            100% { left: 200px; }
+        }
+
+        /* 4. წრის მუდმივი ბრუნვა 1 წამში */
+        .rotate-circle {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50%;
+            animation: rotate 1s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 5. ელემენტის 360°-ით აბრუნება და 1.5x გაზრდა 4 წამში */
+        .rotate-scale {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            animation: rotateScale 4s forwards;
+        }
+
+        @keyframes rotateScale {
+            0% { transform: rotate(0deg) scale(1); }
+            100% { transform: rotate(360deg) scale(1.5); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 2. ფერის ცვლა -->
+    <div class="color-change"></div>
+    <br><br>
+
+    <!-- 3. ელემენტის გადაადგილება -->
+    <div class="move-right"></div>
+    <br><br>
+
+    <!-- 4. წრის ბრუნვა -->
+    <div class="rotate-circle"></div>
+    <br><br>
+
+    <!-- 5. 360°-ით ბრუნვა და გაზრდა -->
+    <div class="rotate-scale"></div>
+</body>
+</html>
