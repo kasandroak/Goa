@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მომხმარებლის ინპუტი</title>
+</head>
+<body>
+
+    <!-- 1) prompt'ის მეშვეობით ორი რიცხვის ჯამი -->
+    <script>
+        let num1 = parseInt(prompt("შეიყვანეთ პირველი რიცხვი:"));
+        let num2 = parseInt(prompt("შეიყვანეთ მეორე რიცხვი:"));
+        let sum = num1 + num2;
+        console.log("რიცხვების ჯამი არის: " + sum);
+    </script>
+
+    <!-- 2) prompt'ის მეშვეობით სახელი და მისალმება -->
+    <script>
+        let name = prompt("გთხოვთ შეიყვანოთ თქვენი სახელი:");
+        console.log("გამარჯობა, " + name + "!");
+    </script>
+
+    <!-- 3) ფორმა და EventListener -->
+    <form id="nameForm">
+        <label for="nameInput">შეიყვანეთ თქვენი სახელი:</label>
+        <input type="text" id="nameInput" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // ვპოულობთ ფორმასა და ღილაკს
+        let form = document.getElementById("nameForm");
+        let nameInput = document.getElementById("nameInput");
+
+        // დამატებული EventListener
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();  // ვხსნით ფორსირებული ფორმის გაგზავნას
+
+            // ვიღებთ მომხმარებლის სახელს
+            let name = nameInput.value;
+
+            // console-ში სახელი
+            console.log("მომხმარებლის სახელი არის: " + name);
+        });
+    </script>
+
+</body>
+</html>
