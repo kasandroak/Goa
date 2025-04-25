@@ -1,11 +1,6 @@
 #codewars 1.
 def hero(bullets, dragons): return bullets >= dragons * 2
 
-# Example usage
-print(hero(10, 5))  # Output: True
-print(hero(7, 4))   # Output: False
-
-
 
 #codewars 2.
 import codewars_test as test

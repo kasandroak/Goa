@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>შედარების ოპერატორები და confirm box</title>
+</head>
+<body>
+
+    <script>
+        // 1) prompt'ის მეშვეობით ორი რიცხვის ჯამი
+        let num1 = parseInt(prompt("შეიყვანეთ პირველი რიცხვი:"));
+        let num2 = parseInt(prompt("შეიყვანეთ მეორე რიცხვი:"));
+        let sum = num1 + num2;
+        console.log("რიცხვების ჯამი არის: " + sum);
+
+        // 2) prompt'ის მეშვეობით სახელი და მისალმება
+        let name = prompt("გთხოვთ შეიყვანოთ თქვენი სახელი:");
+        console.log("გამარჯობა, " + name + "!");
+
+        // 3) confirm box - ზრდასრული თუ არა
+        let isAdult = confirm("ხართ თუ არა ზრდასრული?");
+        if (isAdult) {
+            alert("You are adult");
+        } else {
+            alert("You are kid");
+        }
+
+        // 4) შედარების ოპერატორების მაგალითები:
+        
+        let a = 5;
+        let b = '5';
+        
+        // == (პარტი ტაიპის გარეშე შედარება)
+        console.log(a == b); // true, რადგან ტიპის შეზღუდვა არ არის
+
+        // === (პარტი ტიპის შერჩევით შედარება)
+        console.log(a === b); // false, რადგან ტიპები განსხვავდება (ნომერი და სტრიქონი)
+
+        // != (არანაკლებობა)
+        console.log(a != b); // false, რადგან 5 და '5' არის ერთი და იგივე
+
+        // < (ნაკლებობა)
+        console.log(a < 10); // true, რადგან 5 ნაკლებია 10-ზე
+
+        // > (მეტობა)
+        console.log(a > 3); // true, რადგან 5 მეტია 3-ზე
+    </script>
+
+</body>
+</html>
